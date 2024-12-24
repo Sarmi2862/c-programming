@@ -1,0 +1,32 @@
+#include<stdio.h>
+void bank_tranction(int bal_amount,int amount_send)
+int main()
+{
+    int bal_amount;
+    int amount_send;
+    printf("enter the balance amount";
+    scanf("%d",&bal_amount);
+    printf("enter the tranction amount");
+    scanf("%d",&amount_send);
+    bank_tranction(bal_amount,amount_send);
+    return 0;
+}
+void bank_tranction(int bal_amount,int amount_send)
+{
+    if(bal_amount>=amount_send)
+    {
+        if(amount_send>1000)
+        {
+            printf("\n require additional verification");
+        }
+        else
+        {
+            printf("\n transaction is successful");
+        }
+    }
+    else
+    {
+        printf("\n insufficient funds");
+    }
+}
+    }
