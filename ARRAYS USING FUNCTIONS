@@ -1,0 +1,33 @@
+#include<stdio.h>
+void accept(int a[00],int n);
+void display(int b[100],int n);
+int main()
+{
+    int a[100],b[100];
+    int n,i;
+    printf("enter array size");
+    scanf("%d",&n);
+    printf("\n enter the value of array a\n");
+    accept(a,n);
+    printf("\n enter the value of array b\n");
+    accept(b,n);
+    printf("the value of array a");
+    display(a,n);
+    printf("the value of array b");
+    display(b,n);
+    return 0;
+}
+void accept(int t[100],int n)
+{
+    int i;
+    for(i=0;i<n;i++)
+    scanf("%d",&t[i]);
+}
+void display(int t[100],int n)
+{
+    int i;
+    for(i=0;i<n;i++)
+    {
+        printf("%d",t[i]);
+    }
+}
