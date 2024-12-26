@@ -1,0 +1,50 @@
+#include<stdio.h>
+void accept(int a[100],int n);
+void selection_sort(int a[100],int n);
+void display(int b[100],int n);
+int main()
+{
+    int a[100];
+    int n,i;
+    printf("enter the size ofd array");
+    scanf("%d",&n);
+    printf("enter the values of array:\t");
+    accept(a,n);
+    printf("\t\n before sorting:\t\n");
+    display(a,n);
+    selection_sort(a,n);
+    printf("\t\n after sorting:\t\n");
+    display(a,n);
+    return 0;
+}
+void accept(int t[100],int n)
+{
+    int i;
+    for(i=0;i<n;i++)
+    {
+        scanf("%d",&t[i]);
+    }
+}
+void selection_sort(int a[100],int n)
+{
+    int i,j;
+    int t;
+    for(i=0;i<n-1;i++)
+{
+    for(j=i+1;j<n;j++)
+    if(a[i]>a[j])
+    {
+        t=a[i];
+        a[i]=a[j];
+        a[j]=t;
+    }
+}
+}
+void display(int t[100],int n)
+{
+    int i;
+    for(i=0;i<n;i++)
+    {
+        printf("%d",t[i]);
+    }
+}
